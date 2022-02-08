@@ -1,0 +1,55 @@
+@import "../resources/_data"
+
+.ContinueWatching
+  width: 100%
+  min-height: 100px
+  height: min-content
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  position: relative
+  &::before
+    content: ""
+    width: 25px
+    height: calc(100% - 35px)
+    background: linear-gradient(to right, rgba(23, 23, 27, 1), transparent)
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 1
+  &::after
+    content: ""
+    width: 25px
+    height: calc(100% - 35px)
+    background: linear-gradient(to left, rgba(23, 23, 27, 1), transparent)
+    position: absolute
+    bottom: 0
+    right: 0
+  &__Movies
+    width: 100%
+    height: min-content
+    margin-top: 20px
+    padding: 0 10px 8px
+    display: grid
+    grid-auto-columns: 45%
+    grid-auto-flow: column
+    column-gap: 30px
+    position: relative
+    overflow: auto hidden
+    &::-webkit-scrollbar
+      height: 5px
+      &-thumb
+        border-radius: 3px
+        background: $orange
+        &:hover
+          background: $dark-orange
+
+@media (max-width: "768px")
+  .ContinueWatching
+    &__Movies
+      grid-auto-columns: 60%
+
+@media (max-width: "525px")
+  .ContinueWatching
+    &__Movies
+      grid-auto-columns: 80%

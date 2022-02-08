@@ -1,0 +1,24 @@
+@import '../resources/_data'
+
+.Welcome
+  grid-area: 1 / 1 / 3 / 13
+  height: 100%
+  background: $bg-1
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  z-index: 1
+  &__Title
+    height: 20px
+    margin: unset
+    font: $font-banner
+    font-size: 32px
+  &__Image-Container
+    height: 300px
+    margin-top: -20px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__Image
+    width: 300px

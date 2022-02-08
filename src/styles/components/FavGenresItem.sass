@@ -1,0 +1,51 @@
+@import '../resources/_data'
+
+.FavGenresItem
+  width: max-content
+  height: 30px
+  padding: 6px 10px
+  border-radius: 50px
+  font: $font-12-bold
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &-Lilac
+    @extend .FavGenresItem
+    background: $dark-lilac
+    &:hover
+      background: $lilac
+    &--Active
+      @extend .FavGenresItem-Lilac
+      background: $lilac
+      border: 2px solid white
+  &-Orange
+    @extend .FavGenresItem
+    background: $dark-orange
+    &:hover
+      background: $orange
+    &--Active
+      @extend .FavGenresItem-Orange
+      background: $orange
+      border: 2px solid white
+  &-Cyan
+    @extend .FavGenresItem
+    background: $dark-cyan
+    &:hover
+      background: $cyan
+    &--Active
+      @extend .FavGenresItem-Cyan
+      background: $cyan
+      border: 2px solid white
+  &__Delete-Button
+    width: 14px
+    height: 14px
+    border-radius: 10px
+    background: $text-1 !important
+    margin-left: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__Delete-Icon
+    width: 8px
+    background: unset !important
+

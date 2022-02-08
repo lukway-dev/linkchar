@@ -1,0 +1,64 @@
+@import '../resources/_data'
+
+.Details
+  grid-area: 2 / 1 / 2 / 13
+  width: 100%
+  max-width: 600px
+  height: 100%
+  margin: 0 auto
+  padding: 16px
+  display: flex
+  flex-direction: column
+  align-items: center
+  overflow: hidden auto
+  &::-webkit-scrollbar
+    width: 5px
+    &-thumb
+      border-radius: 3px
+      background: $orange
+      &:hover
+        background: $dark-orange
+  &__Data
+    width: 100%
+    margin-bottom: 20px
+    display: flex
+  &__Poster
+    width: 40%
+  &__Items-Container
+    padding: 16px
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(5, auto)
+    row-gap: 10px
+    align-content: start
+  &__Item-Name
+    color: $orange
+    font: $font-12-bold
+    font-size: 16px
+  &__Item-Value
+    font-size: 16px
+  &__Description
+    line-height: 18px
+
+@media (max-width: "1024px")
+  .Details
+    grid-area: 2 / 1 / 4 / 13
+
+@media (max-width: "768px")
+  .Details
+    &__Data
+      flex-direction: column
+      align-items: center
+    &__Items-Container
+      padding: 16px unset
+      align-items: center
+      justify-content: flex-start
+    &__Poster
+      width: 50%
+
+@media (max-width: "525px")
+  .Details
+    &__Data
+      padding: 0 50px
+    &__Poster
+      width: 100%

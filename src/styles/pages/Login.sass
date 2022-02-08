@@ -1,0 +1,44 @@
+@import '../resources/_data'
+
+.Login
+  grid-area: 1 / 1 / 3 / 13
+  width: 100%
+  height: 100%
+  background: $bg-1
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 1
+  .Title
+    font-size: 24px
+  &__Card
+    border-radius: 15px
+    padding: 40px 20px 20px
+    background: $bg-3
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(3, auto)
+    row-gap: 30px
+    justify-items: center
+  &__Logo
+    width: 50%
+  &__Play-Icon
+    width: 20%
+  &__Button
+    width: 300px
+    height: 40px
+    border-radius: 10px
+    padding: 6px 10px
+    background: $text-1
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    color: $bg-1
+    font: $font-12-bold
+    font-size: 16px
+    &:hover
+      background: $text-2
+  &__Button-Icon
+    position: absolute
+    left: 10px

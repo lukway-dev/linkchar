@@ -1,0 +1,46 @@
+@import "../resources/_data"
+
+.Navbar
+  height: 100%
+  display: flex
+  align-items: center
+
+  &__Logo
+    width: 76px
+    margin-right: 16.6%
+
+  &__Links-Container
+    height: 100%
+    display: grid
+    grid-template-columns: repeat(4, auto)
+    column-gap: 30px
+    align-items: center
+
+  &__Link
+    width: 90px
+    height: 100%
+    padding: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $text-2
+    font: $font-12-bold
+    position: relative
+    &:hover
+      color: $text-1
+      .Navbar__Blob
+        height: 10px
+
+  &__Link--Active
+    @extend .Navbar__Link
+    color: $text-1
+    .Navbar__Blob
+      height: 10px
+
+  &__Blob
+    width: 50px
+    height: 0px
+    position: absolute
+    bottom: 0
+    left: calc(50% - 25px)
+    transition: height .1s

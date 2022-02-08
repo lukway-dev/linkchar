@@ -1,0 +1,134 @@
+@import "../resources/_data"
+
+.Movie
+  width: 100%
+  aspect-ratio: 16/9
+  border-radius: 20px
+  overflow: hidden
+  position: relative
+  &__Controls
+    height: 50px
+    border-radius: 10px 10px 20px 20px
+    padding: 6px 16px
+    backdrop-filter: blur(5px)
+    display: grid
+    grid-template-columns: 28px 1fr 28px
+    column-gap: 15px
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    text-shadow: 0 0 5px black
+  &__Play-Button
+    width: 28px
+    height: 28px
+    border-radius: 15px
+    background: $orange
+    box-shadow: 0 0 5px black
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      background: $dark-orange
+  &__Controls-Icon
+    width: 14px
+    height: 24px
+  &__Data
+    max-width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    overflow: hidden
+  &__Title
+    width: 100%
+    margin: unset
+    font: $font-12-bold
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+  &__Time
+    color: $text-2
+    font: $font-12-regular
+  &__Data
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+  &__Info-Button
+    @extend .Movie__Play-Button
+    background: $bg-button
+    &:hover
+      background: $bg-dark-button
+    img
+      filter: drop-shadow(0 0 3px black)
+  &__Views
+    border-radius: 20px
+    padding: 5px
+    background: $orange
+    display: flex
+    align-items: center
+    position: absolute
+    top: 10px
+    right: 10px
+    font: $font-10-semibold
+  &__Views-Icon
+    width: 14px
+    height: 14px
+    margin-right: 5px
+  &__Image
+    width: 100%
+    height: 100%
+    border-radius: 20px
+  &__Description-Container
+    width: 100%
+    height: 100%
+    border-radius: 20px
+    padding: 15px
+    background: $bg-shadow
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto auto 1fr
+    justify-content: flex-start
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    overflow: hidden
+  &__Description-Title
+    width: calc(100% - 30px)
+    height: 20px
+    margin: 0 0 10px
+    font-size: 16px
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+  &__Description
+    margin-bottom: unset
+    overflow: hidden
+  &__Close
+    width: 20px
+    height: 20px
+    border-radius: 20px
+    background: white
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 16px
+    right: 16px
+    &:hover
+      background: $bg-button
+  &__Close-Icon
+    width: 12px
+    height: 12px
+  &__Like
+    position: absolute
+    top: 10px
+    left: 10px
+  &__Like-Icon
+    height: 20px

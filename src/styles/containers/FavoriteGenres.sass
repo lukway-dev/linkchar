@@ -1,0 +1,84 @@
+@import "../resources/_data"
+
+.Favorites
+  width: 100%
+  height: 240px
+  padding: 16px
+  background: $bg-2
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  font: $font-12-semibold
+  &__Items-Container
+    margin-top: 30px
+    display: grid
+    grid-template-columns: repeat(3, auto)
+    grid-template-rows: repeat(2, 25px)
+    gap: 15px 20px
+    justify-items: center
+  &__Item
+    padding: 5px 10px
+    border-radius: 50px
+    background: $bg-3
+    display: flex
+    justify-content: center
+    align-items: center
+    &--Lilac
+      @extend .Favorites__Item
+      background: $lilac
+      &:hover
+        background: $dark-lilac
+    &--Orange
+      @extend .Favorites__Item
+      background: $orange
+      &:hover
+        background: $dark-orange
+    &--Cyan
+      @extend .Favorites__Item
+      background: $cyan
+      &:hover
+        background: $dark-cyan
+  &__Add-Caption
+    margin: 20px 0
+    display: flex
+    align-items: center
+  &__Add-Icon
+    width: 16px
+    height: 16px
+    margin-right: 8px
+  &__Add-Items-Container
+    display: grid
+    grid-template-columns: repeat(3, auto)
+    column-gap: 10px
+  &__Add-Item
+    @extend .Favorites__Item
+    &:hover
+      background: $bg-1
+  &__See-More
+    @extend .Favorites__Item
+    height: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      background: $bg-1
+
+@media (max-width: "1024px")
+  .Favorites
+    height: min-content
+    &__Items-Container
+      width: min-content
+      max-width: 100%
+      padding: 0 10px 10px
+      grid-template-rows: 25px
+      grid-auto-flow: column
+      gap: 0 15px
+      justify-items: center
+      overflow: scroll hidden
+      &::-webkit-scrollbar
+        height: 5px
+        &-thumb
+          border-radius: 3px
+          background: $orange
+          &:hover
+            background: $dark-orange
